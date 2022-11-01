@@ -1,0 +1,26 @@
+.create-campaign-btn{
+    background: #0cd8e3;
+    height: 2rem;
+    width: px;
+    border-radius: 5px;
+    border: none;
+}
+
+.view{
+    
+}
+
+.header{
+    display: flex;
+}
+
+.searchbar{
+    width:fill;
+}
+
+.min-contri{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    padding: 5px;
+}

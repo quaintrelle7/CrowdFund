@@ -1,16 +1,18 @@
 import React, {Component}from 'react';
 import factory from '../blockend/factory';
-import {Card} from 'semantic-ui-react';
-
+import {Button, Card} from 'semantic-ui-react';
+import Layout from '../components/Layout';
 class CampaignIndex extends React.Component{
 
     //Whenever component is rendered the getInitialProps is get called
 
     static async getInitialProps(){
-        const campaigns = await factory.methods.getDeployedCampaigns().call();
+        const campaigns = await factory.methods.getDeployedContracts().call();
         return {campaigns: campaigns};
     }
     // async componentDidMount(){
+
+    //     const campaigns = await factory.methods.getDeployedContracts().call();
     //     console.log(campaigns);
     // }
     renderCampaigns(){
@@ -30,15 +32,20 @@ class CampaignIndex extends React.Component{
 // how it is used: In an object method, this refers to the object.
     render(){
         return(
-            <div>{this.renderCampaigns()}</div>
+            <Layout>
+            <div className='index'>
+            <h3>Open Campaigns</h3>
+            <div>{this.renderCampaigns()} </div>
+            <div className='view'>Hi</div>
+            <Button className='create-campaign-btn'>Create Campaign</Button>
+            </div>
+            </Layout>
+            
+            
         );
     }
 }
-// function Campaignindex() {
-//   return (
-//     <div>index</div>
-//   )
-// }
+
 
  export default CampaignIndex;
 

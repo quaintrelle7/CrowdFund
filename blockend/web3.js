@@ -4,9 +4,11 @@ let web3;
 
 //typeof operator is to see if the var is defined
 //to see if we are on the server or browser
-if (typeof window!=='undefined' && typeof window.ethereum!== 'undefined') {
+if (typeof window !=="undefined" && typeof window.ethereum !== "undefined") {
     //we are in the browser AND metamask is running
     //typeof window in the browser is object
+    window.ethereum.request({ method: "eth_requestAccounts" });
+
     web3 = new Web3(window.ethereum);
 
 }else{
@@ -17,16 +19,9 @@ if (typeof window!=='undefined' && typeof window.ethereum!== 'undefined') {
 
     );
 
+
+
     web3 = new Web3(provider);
-
-
 }
 export default web3;
 
-// import Web3 from "web3";
- 
-// window.ethereum.request({ method: "eth_requestAccounts" });
- 
-// const web3 = new Web3(window.ethereum);
- 
-// export default web3;
