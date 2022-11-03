@@ -11,4 +11,17 @@
 - npm run dev
 - index.js is the home page :3000/
 
+###### Button Spinning So that user can't click on the create button multiple times as it'll lead to the multiple windows.
 
+# routes.js
+Defines our different routes
+
+# server.js
+Boot up next app, tell it to use routes.js
+
+
+To-Do
+
+//Make error Handling work in ContributeFrom
+
+//Always check for unit transformation from wei to ether or vice-versa

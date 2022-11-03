@@ -1,17 +1,7 @@
-import web3 from './web3'
+import web3 from './web3';
 
-import CampaignFactory from 'F:/Open-Source/My-Projects/CrowdFunding/blockend/build/CampaignFactory.json'
-// console.log(CampaignFactory);
-//  New keyword in JavaScript is used to create an instance of an object that has a constructor function. 
 
-// JSON.parse to convert the simple string to Javascript Object
-// const instance = new web3.eth.Contract(
-//     JSON.parse([CampaignFactory.interface], 
-//     '0x089985fC9BDA282Ad5A99ef3C9ba75d5FFe9a5Fc')
-// );
-
-// const contractJson = fs.readFileSync('F:/Open-Source/My-Projects/CrowdFunding/blockend/build/CampaignFactory.json');
-const abi =[
+const abiCampaign =[
 	{
 		"inputs": [
 			{
@@ -229,54 +219,9 @@ const abi =[
 	}
 ]
 
-const abiFactory = [
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "minimum",
-				"type": "uint256"
-			}
-		],
-		"name": "createCampaign",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "deployedCampaigns",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getDeployedContracts",
-		"outputs": [
-			{
-				"internalType": "address[]",
-				"name": "",
-				"type": "address[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
-const instance = new web3.eth.Contract(abiFactory, '0x1df82DC3D76Aa7a05Cc801f4078Df32020FA5277');
-// const instance = contract.at('0x34f9150E63dDf5dD0f5B0D45a50C7B14fa87142E');
-export default instance;
 
+export default (address) => {
+    return new web3.eth.Contract(
+        abiCampaign, address
+    );
+}

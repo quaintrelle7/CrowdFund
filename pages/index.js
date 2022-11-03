@@ -2,6 +2,9 @@ import React, {Component}from 'react';
 import factory from '../blockend/factory';
 import {Button, Card} from 'semantic-ui-react';
 import Layout from '../components/Layout';
+import {Link} from '../routes';
+import 'semantic-ui-css/semantic.min.css';
+
 class CampaignIndex extends React.Component{
 
     //Whenever component is rendered the getInitialProps is get called
@@ -19,7 +22,11 @@ class CampaignIndex extends React.Component{
         const items = this.props.campaigns.map(address=>{
             return{
             header: address,
-            description: <a>View Campaign</a>,
+            description:(
+                <Link route={`/campaigns/${address}`}>
+                    <a>View Campaign</a>
+                </Link>
+            ) ,
             fluid: true
             };
         });
@@ -37,7 +44,13 @@ class CampaignIndex extends React.Component{
             <h3>Open Campaigns</h3>
             <div>{this.renderCampaigns()} </div>
             <div className='view'>Hi</div>
-            <Button className='create-campaign-btn'>Create Campaign</Button>
+
+            <Link route= '/campaigns/new'>
+                <a className='app-logo'>
+                    <Button className='create-campaign-btn'>Create Campaign</Button>
+                </a>
+            </Link>
+
             </div>
             </Layout>
             
