@@ -277,6 +277,5 @@ const abiFactory = [
 	}
 ]
 const instance = new web3.eth.Contract(abiFactory, '0x1df82DC3D76Aa7a05Cc801f4078Df32020FA5277');
-// const instance = contract.at('0x34f9150E63dDf5dD0f5B0D45a50C7B14fa87142E');
 export default instance;
 
