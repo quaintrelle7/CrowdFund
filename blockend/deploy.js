@@ -31,13 +31,11 @@ const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json');
 
 const provider = new HDWalletProvider(
-    // process.env.NEXT_PUBLIC_META_MASK,
-    // process.env.NEXT_PUBLIC_INFURA_API
+    process.env.METAMASK_PHRASE,
+    process.env.INFURA_API_KEY
+// remember to change this to your own phrase!
 
-     'work choose wasp gravity simple lobster report spring position people lonely diesel',
-//   // remember to change this to your own phrase!
-    'https://goerli.infura.io/v3/b3b0f06164064cc6b9c2811fd0ea2f60'
-//   // remember to change this to your own endpoint!
+     
 );
 
 const web3 = new Web3(provider);

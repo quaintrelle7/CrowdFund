@@ -2,7 +2,6 @@ import React from 'react'
 import { Table, Button } from 'semantic-ui-react';
 import web3 from '../blockend/web3';
 import abiCampaign from '../blockend/campaign'
-import { read } from 'fs-extra';
 
 class RequestRow extends React.Component{
    
@@ -27,9 +26,8 @@ class RequestRow extends React.Component{
     {
          const{Row, Cell} = Table;
          const{id, request, contributersCount} = this.props;
-        //  const readyToFinalize = request.approvalCount> contributersCount/2;
-// disabled={request.complete} positive={readyToFinalize && !request.complete}
-        return(<Row >
+         const readyToFinalize = request.approvalCount> contributersCount/2;
+        return(<Row disabled={request.complete} positive={readyToFinalize && !request.complete}>
         <Cell>{id}</Cell>
         <Cell>{request.description}</Cell>
         <Cell>{web3.utils.fromWei(request.value, 'ether')}</Cell>

@@ -37,6 +37,8 @@ class RequestIndex extends React.Component{
             />
         })
     }
+                        //Two curly braces for the style tag : One to recognize JSX, another to recognize an Object
+                    
     render(){
 
         const {Header, HeaderCell, Row, Body} = Table;
@@ -45,8 +47,7 @@ class RequestIndex extends React.Component{
             <h3>Requests</h3>
             <Link route={`/campaigns/${this.props.address}/requests/new`}>
                 <a>
-                    //Two curly braces for the style tag : One to recognize JSX, another to recognize an Object
-                    <Button primary floated='right' style={{marginBottom:10}}>Add Request</Button>
+<Button primary floated='right' style={{marginBottom:10}}>Add Request</Button>
                 </a>
             </Link>
             <Table>
