@@ -42,22 +42,22 @@ class ShowCampaign extends Component {
 
        {
         header: minimumContribution,
-        meta: '',
+        meta: 'Minimum Contribution in Wei',
         description: 'Manager is a creator of campaign and can create requests to withdraw money'
       },
        {
         header: requestsCount,
-        meta: 'Address of manager',
+        meta: 'Total Count of Requests',
         description: 'Manager is a creator of campaign and can create requests to withdraw money'
       },
        {
         header: approversCount,
-        meta: 'Address of manager',
+        meta: 'No. of Approvers',
         description: 'Manager is a creator of campaign and can create requests to withdraw money'
       },
        {
-        header: balance,
-        meta: 'Address of manager',
+        header: web3.utils.fromWei(balance, 'ether'),
+        meta: 'Balance of Contract',
         description: 'Manager is a creator of campaign and can create requests to withdraw money'
       }
     ];
