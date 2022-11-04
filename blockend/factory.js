@@ -1,6 +1,5 @@
 import web3 from './web3'
 
-import CampaignFactory from 'F:/Open-Source/My-Projects/CrowdFunding/blockend/build/CampaignFactory.json'
 // console.log(CampaignFactory);
 //  New keyword in JavaScript is used to create an instance of an object that has a constructor function. 
 
