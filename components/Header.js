@@ -4,23 +4,23 @@ import {Link} from '../routes';
 
 function Header() {
   return (
-   <div className='header'>
+   <div className='header-js'>
     <Link route= '/'>
     <a className='app-logo'>
-      CrowdFund
+     <h2>CrowdFund</h2> 
     </a>
     </Link>
     <div className="searchbar"></div>
 
-    <Link route= '/'>
+    {/* <Link route= '/'>
     <a className='app-logo'>
-      Campaigns
+      <h2>Campaigns</h2>
     </a>
-    </Link>
+    </Link> */}
 
     <Link route= '/campaigns/new'>
-    <a className='app-logo'>
-      +
+    <a >
+    <div className='create'>Create Campaign</div>
     </a>
     </Link>
     

@@ -24,14 +24,17 @@ class CampaignIndex extends React.Component{
             header: address,
             description:(
                 <Link route={`/campaigns/${address}`}>
-                    <a>View Campaign</a>
+                    <a className='view-camp'>View Campaign</a>
                 </Link>
             ) ,
-            fluid: true
+            fluid:true
             };
         });
 
-        return <Card.Group items={items}/>;
+        return <Card.Group items={items} className="campaign-card"/>;
+
+       
+      
     };
 // In JavaScript, the this keyword refers to an object.
 //  Which object depends on how this is being invoked (used or called).
@@ -41,13 +44,12 @@ class CampaignIndex extends React.Component{
         return(
             <Layout>
             <div className='index'>
-            <h3>Open Campaigns</h3>
+            <h2 className='heading-index'>Open Campaigns</h2>
             <div>{this.renderCampaigns()} </div>
-            <div className='view'>Hi</div>
 
             <Link route= '/campaigns/new'>
                 <a className='app-logo'>
-                    <Button className='create-campaign-btn'>Create Campaign</Button>
+                    <Button primary style={{marginTop:40, marginBottom:20, marginLeft:300}} className="create-campaign-btn">Create Campaign</Button>
                 </a>
             </Link>
 

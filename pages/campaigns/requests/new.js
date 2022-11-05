@@ -56,7 +56,8 @@ class RequestNew extends React.Component{
                 Back
                 </a>
             </Link>
-           <h3>Create a Request!</h3>
+            <div className="new-form">
+<h3>Create a Request!</h3>
             <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
             <Form.Field>
                 <label>Description</label>
@@ -83,6 +84,8 @@ class RequestNew extends React.Component{
              <Button primary loading={this.state.loading}>Create!</Button> 
             </Form>
 
+            </div>
+           
              {/* <form onSubmit={this.onSubmit}>
           
                 <label>Description</label>

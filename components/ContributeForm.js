@@ -51,9 +51,8 @@ class ContributeForm extends React.Component{
                     label="ether" labelPosition="right"
                 />
             </Form.Field>
-            {/* <Message error header="Oops!" content={this.state.errorMessage}/> */}
-                <message className="form-error-message" >{this.state.errorMessage}</message>
-
+            <Message error header="Oops!" content={this.state.errorMessage}/>
+             
             <Button primary loading={this.state.loading}>Contribute</Button>
         </Form>);
     }

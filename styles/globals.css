@@ -1,23 +1,64 @@
 .create-campaign-btn{
-    background: #0cd8e3;
-    height: 2rem;
-    width: px;
-    border-radius: 5px;
-    border: none;
+    margin-left: 200px;
+}
+.layout{
+    height: fill;
 }
 
-.view{
+.create{
+    font-size: x-large;
+    display: flex;
+    width: 200px;
+    text-align:left;
+    font-weight: 800;
+    margin-top: 5px;
+}
+.contribute{
+    padding-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.view-camp{
+    color: rgb(127, 10, 244);
+    font-size: medium;
+    font-style: oblique;
+}
+.new-form{
+     padding-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.index{
+}
+
+.header-js{
+    display: flex;
+    height: 60px;
     
 }
 
-.header{
-    display: flex;
-}
 
+.header{
+    overflow: auto;
+}
+.campaign-card{
+
+   
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    
+}
 .searchbar{
     width:fill;
 }
 
+.heading-index{
+     color: rgb(127, 10, 244);
+     text-align: center;
+     font-size: x-large;
+}
 .min-contri{
     display: flex;
     flex-direction: column;
@@ -27,4 +68,23 @@
 
 .form-error-message{
     color: red;
+}
+.body{
+    background: #000;
+}
+
+.show{
+    
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.view-request{
+     padding-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    
 }

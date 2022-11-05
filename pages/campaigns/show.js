@@ -43,22 +43,22 @@ class ShowCampaign extends Component {
        {
         header: minimumContribution,
         meta: 'Minimum Contribution in Wei',
-        description: 'Manager is a creator of campaign and can create requests to withdraw money'
+        description: 'Minimum contribution needs to made to be added as an approver'
       },
        {
         header: requestsCount,
         meta: 'Total Count of Requests',
-        description: 'Manager is a creator of campaign and can create requests to withdraw money'
+        description: 'Number of requests made by manager for spending the money'
       },
        {
         header: approversCount,
-        meta: 'No. of Approvers',
-        description: 'Manager is a creator of campaign and can create requests to withdraw money'
+        meta: 'No. of Contributers',
+        description: 'Total numbers of people who have contributed to the campaign'
       },
        {
         header: web3.utils.fromWei(balance, 'ether'),
         meta: 'Balance of Contract',
-        description: 'Manager is a creator of campaign and can create requests to withdraw money'
+        description: 'Sum of the money contributed to the campaign by contributers'
       }
     ];
 
@@ -68,23 +68,29 @@ class ShowCampaign extends Component {
   {
     return (
         <Layout>
-            <div className='show'></div>
-            <h3>Campaigns</h3>
-            <Grid>
-              <Grid.Column width={10}>
-                 {this.renderSummary()}
+            <h3 className='heading-index'>About Campaign</h3>
+
+            <div className='show'>
+                {this.renderSummary()}
+            </div>
+
+                  
+
+              <div className="view-request">
                  <Link route={`/campaigns/${this.props.address}/requests`}>
                   <a>
                     <Button primary>View Requests</Button>
                   </a>
                  </Link>
-              </Grid.Column>
-            </Grid>
-           <Grid>
-              <Grid.Column width={6}>
+
+                </div> 
+               <div className="contribute">
+              
                 <ContributeForm address={this.props.address}/>
-                </Grid.Column>
-            </Grid>
+
+              </div> 
+                
+              
         </Layout>
     )
   }

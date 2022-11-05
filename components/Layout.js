@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './Header';
 function Layout(props) {
   return (
-    <div>
+    <div className='layout'>
     <Header/>
     {props.children}
-    <h1>I am a Footer</h1>
-    
+    {/* <Footer/> */}
+    <h1></h1>
     </div>
   )
 };

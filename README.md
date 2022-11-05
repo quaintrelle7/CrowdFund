@@ -25,3 +25,9 @@ To-Do
 //Make error Handling work in ContributeFrom
 
 //Always check for unit transformation from wei to ether or vice-versa
+
+//Things to Add and Improve
+
+1. Description of the campaign
+Add in Campaign.sol
+Then in new.js above the minimumContribution
