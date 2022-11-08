@@ -1,6 +1,7 @@
 //Second set of parentheses means that 
 // require statement returns a function
 
+//To set the routes dynamically
 
 const routes = require('next-routes')();
 
