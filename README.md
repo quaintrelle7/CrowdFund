@@ -1,33 +1,21 @@
-- npm init
-- npm install ganache-cli mocha solc fs-extra web3
-- mocha is a nodejs testing library
-- fs is a file system library in nodejs
-- The assert module provides a way of testing expressions.
-- node compile.js to get build folder
-<!-- draw.io is for preparing for the frontend structre, etc. -->
-### next.js
+Git clone and Run following commpands from root directory:
 
-- It'll look for "pages" directory
-- npm run dev
-- index.js is the home page :3000/
+    npm install
+    npm run dev
 
-###### Button Spinning So that user can't click on the create button multiple times as it'll lead to the multiple windows.
+- Make an .env file and set
+    
+    Replace METAMASK_PHRASE with Metamask pneumonics and INFURA_API_KEY with yours. In deploy.js.
 
-# routes.js
-Defines our different routes
-
-# server.js
-Boot up next app, tell it to use routes.js
+- Test on Ethereum network.
 
 
-To-Do
 
-//Make error Handling work in ContributeFrom
+### Working
 
-//Always check for unit transformation from wei to ether or vice-versa
+In the crowdfunding project, I have created a smart contract for anyone who wants to create the campaign. The creator of the campaign is also known as the ‘manager of the campaign contract’. The manager only can spend the money donated to the contract. Where in each request manager will have to specify the recipient of the money and the money manager wants to spend. To donate the money from the campaign balance, the manager needs the permission of the contributors of the campaign. The manager can create the ‘Request for spending money’ . For each request, all the contributors can vote. If the request gets approval from 50% or more contributors, then the manager can spend the money.  
 
-//Things to Add and Improve
+### Tools and Tech:
 
-1. Description of the campaign
-Add in Campaign.sol
-Then in new.js above the minimumContribution
+I have used the NextJS framework for the frontend and have written the contract in solidity.
+There are two contracts. One is to create the campaign and another is the factory contract to ask our solidity program to create the campaign. As this will save the campaign contract from any attacks and tampering.
